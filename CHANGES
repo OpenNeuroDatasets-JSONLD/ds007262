@@ -1,3 +1,5 @@
+1.1.0 2026-06-20
+  - Added a per-trial response_time column to every sub-*/eeg/*_task-arithmetic_events.tsv (answer latency from response-window onset to submission, in seconds), documented in task-arithmetic_events.json. Corrected EEG amplitude scaling — in v1.0.6 and earlier the EEG channels were inadvertently scaled by 10⁶ during XDF→BIDS conversion and weren't true microvolts; they're now in correct µV (so channels.tsv's "µV" units are accurate). ECG/auxiliary channels were unaffected; anyone who used EEG amplitudes from an earlier version should re-download.
 1.0.6 2026-02-24
   - not updating doi
 1.0.5 2026-02-24
